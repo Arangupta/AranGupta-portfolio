@@ -1,0 +1,40 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore build output
+.next/
+out/
+dist/
+
+# Ignore log files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignore system junk
+.DS_Store
+Thumbs.db
+
+# Ignore PDF documents
+*.pdf
+
+# Ignore Excel and CSV files
+*.xls
+*.xlsx
+*.csv
+
+# Ignore audio files
+*.mp3
+*.wav
+*.aac
+*.ogg
+
+# Optional: ignore zip and installer files
+*.zip
+*.exe
+*.tar
+*.rar
+node_modules
+node_modules
+node_modules
+node_modules

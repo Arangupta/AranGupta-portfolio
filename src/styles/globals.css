@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  body, html {
+    background: #000000;
+    color: #F5F3EE;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors;
+  }
+  
+  .section-title, h2.section-title {
+    color: #00EFFF !important; /* Custom bright cyan */
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Top gradient bar */
+  .top-gradient-bar {
+    width: 100vw;
+    height: 80px;
+    background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+  }
+
+  .bg-gradient-to-br {
+    background: none !important;
+  }
+
+  /* Glassmorphism effect for cards and navbar */
+  .glass {
+    background: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .bg-gray-900, .bg-gray-800 {
+    background-color: #000000 !important;
+  }
+
+  .text-accent, .bg-accent, a, .hover\:underline:hover {
+    color: #ffb347 !important;
+    background: transparent;
+  }
+
+  .bg-accent, .btn-accent, .rounded-xl, .rounded-lg, .rounded-full {
+    border-radius: 1.25rem;
+  }
+
+  .shadow-lg, .shadow-2xl {
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
+  }
+
+  button, .btn, .hover\:bg-blue-700:hover {
+    transition: background 0.2s, color 0.2s;
+    background: rgba(36,36,36,0.85);
+    color: #ffb347;
+    border-radius: 1.25rem;
+    font-weight: 600;
+    border: 1px solid #ffb347;
+  }
+
+  .card, .glass, .bg-gray-800, .bg-gray-900 {
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .bg-blue-600, .bg-blue-600\/20 {
+    background-color: rgba(36,36,36,0.85) !important;
+  }
+
+  .text-blue-400, .text-blue-600, .text-blue-700 {
+    color: #ffb347 !important;
+  }
+
+  /* For card headers or important text */
+  .card-title, h1 {
+    color: #fff;
+    letter-spacing: 0.01em;
+  }
+  h1, .hero-title {
+    font-family: 'Playfair Display', 'Merriweather', serif;
+    color: #F5F3EE;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .navbar {
+    background: transparent;
+    color: #F5F3EE;
+    font-size: 1.1rem;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  }
+
+  a, .link, .navbar a {
+    color: #F5F3EE;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  a:hover, .link:hover, .navbar a:hover {
+    color: #C97A4B;
+  }
+
+  .btn, button, .get-started-btn {
+    background: #C97A4B;
+    color: #fff;
+    border-radius: 2rem;
+    padding: 0.75rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    box-shadow: none;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .btn:hover, button:hover, .get-started-btn:hover {
+    background: #a65d32;
+    color: #fff;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: #F5F3EE;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Geometric shapes for hero section */
+  .shape-brown {
+    background: #C97A4B;
+    border-radius: 50% 50% 0 0;
+  }
+  .shape-blue {
+    background: #232A34;
+    border-radius: 0 0 50% 50%;
+  }
+  .dot {
+    width: 18px;
+    height: 18px;
+    background: #C97A4B;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+
+  .card, .bg-gray-800, .bg-gray-900 {
+    background: #000000 !important;
+    border-radius: 0.75rem;
+    box-shadow: none;
+    color: #F5F3EE;
+    border: 0px solid #00EFFF !important;
+    box-shadow: 0 0 12px 0 #00EFFF44;
+  }
+
+  /* Utility for large spacing */
+  .section {
+    padding: 4rem 0;
+  }
+}
+
+.github-link {
+  transition: color 0.2s, transform 0.2s;
+}
+.github-link:hover {
+  color: #00EFFF !important;
+  transform: scale(1.08) translateY(-2px);
+  text-decoration: underline;
+}
+
+.highlight-link {
+  color: #00EFFF !important;
+  background: rgba(0,239,255,0.10);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 9999px;
+  padding: 0.35em 1.1em;
+  border: 2px solid #00EFFF;
+  box-shadow: 0 0 6px #00EFFF66;
+  transition: box-shadow 0.2s, color 0.2s, background 0.2s, border 0.2s;
+  letter-spacing: 0.01em;
+  display: inline-block;
+  cursor: pointer;
+}
+.highlight-link:hover {
+  box-shadow: 0 0 16px #00EFFF, 0 0 4px #fff;
+  background: rgba(0,239,255,0.18);
+  color: #fff !important;
+  border-color: #fff;
+  text-decoration: none;
+}
+
+/* Highlight all anchor tags on hover */
+a:hover {
+  color: #00EFFF !important;
+  text-decoration: underline;
+}
+
+/* Force all text to white, except neon text */
+*:not(.text-primary) {
+  color: #fff !important;
+} 
+
+.hero-image-gap {
+  margin-bottom: 0px;
+} 
+
+.bg-darkAlt {
+  background: #111111 !important;
+} 
