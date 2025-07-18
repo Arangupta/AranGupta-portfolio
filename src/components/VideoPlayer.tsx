@@ -21,6 +21,7 @@ const VideoPlayer = ({ src, title, poster }: VideoPlayerProps) => {
         muted
         loop
         poster={poster}
+        preload="auto"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         onLoadedMetadata={e => {

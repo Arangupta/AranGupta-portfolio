@@ -473,7 +473,7 @@ export default function ProjectDetail({
                   className="bg-gray-800 rounded-xl p-4 border border-cyan-700 flex flex-col items-center"
                 >
                   <Image
-                    src="/projects/Screenshot 2025-06-30 182935.png"
+                    src="/projects/freecompress-Screenshot 2025-06-30 182935.png"
                     alt="Custom Level Selection Panel"
                     width={480}
                     height={300}

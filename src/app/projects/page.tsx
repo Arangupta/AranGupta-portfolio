@@ -75,6 +75,7 @@ export default function Projects() {
                   autoPlay
                   muted
                   loop
+                  preload="auto"
                 />
               ) : project.thumbnail && (
                 <div className="relative aspect-video">
